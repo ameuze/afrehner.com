@@ -19,14 +19,9 @@ COPY backend/src ./src
 RUN npm run build
 
 # ── Stage 3: Production ────────────────────────────────────────────────────────
-FROM node:22-alpine AS production
+# Official Playwright image has Chromium + all dependencies pre-installed
+FROM mcr.microsoft.com/playwright:v1.58.2-noble AS production
 
-# Chromium + dependencies for Playwright
-RUN apk add --no-cache chromium nss freetype harfbuzz ca-certificates ttf-freefont bash
-
-ENV PLAYWRIGHT_BROWSERS_PATH=/usr/bin
-ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1
-ENV CHROMIUM_PATH=/usr/bin/chromium-browser
 ENV NODE_ENV=production
 
 WORKDIR /app
