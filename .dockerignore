@@ -1,0 +1,10 @@
+**/node_modules
+**/dist
+frontend/src/generated
+backend/reports
+playwright-tests/playwright-report
+playwright-tests/test-results
+**/*.log
+.env
+.git
+.gitignore

@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment
+.env
+**/.env
+!.env.example
+**/.env.example
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+
+# Generated files
+frontend/src/generated/
+
+# Test artifacts
+playwright-tests/test-results/
+playwright-tests/playwright-report/
+playwright-tests/reports/
+backend/reports/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+

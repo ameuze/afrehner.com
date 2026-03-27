@@ -1,0 +1,111 @@
+personal:
+  name: "Annette Frehner"
+  title: "Software Development Engineer in Test (SDET)"
+  tagline: "I break things on purpose — so your users don't have to."
+  email: "afrehner66@gmail.com"
+  location: "Tooele, Utah"
+  avatar: ""
+
+social:
+  github: "https://github.com/ameuze"
+  linkedin: "https://linkedin.com/in/annette.frehner"
+  twitter: ""
+  youtube: ""
+
+resume:
+  url: "PLACEHOLDER_RESUME_URL"
+  label: "Download Resume"
+
+about:
+  bio: |
+    Detail-oriented Software Quality Test Engineer with 8+ years of experience,
+    specializing in automation and manual testing for internal and web-based
+    applications. Proven ability to troubleshoot complex issues and deliver
+    high-quality, defect-free software through meticulous testing and collaboration.
+
+    I'm passionate about building robust automation frameworks and driving software
+    quality end-to-end — from writing API contract tests with Pact to crafting
+    maintainable UI automation with Playwright and JavaScript.
+  highlights:
+    - "8+ years in QA automation and manual testing"
+    - "Expert in Playwright end-to-end automation"
+    - "API contract (Pact) testing and JSON schema validation"
+    - "Agile methodologies and cross-team collaboration"
+    - "Automation framework architecture and module versioning"
+
+skills:
+  categories:
+    - name: "Test Automation"
+      icon: "terminal"
+      items:
+        - { name: "Playwright", level: 95 }
+        - { name: "API Contract Testing (Pact)", level: 88 }
+        - { name: "Selenium WebDriver", level: 70 }
+    - name: "Languages"
+      icon: "code"
+      items:
+        - { name: "JavaScript", level: 90 }
+        - { name: "SQL", level: 75 }
+    - name: "Tools & Platforms"
+      icon: "settings"
+      items:
+        - { name: "Git", level: 90 }
+        - { name: "Jira", level: 88 }
+        - { name: "Postman", level: 85 }
+    - name: "Testing Types"
+      icon: "check-circle"
+      items:
+        - { name: "End-to-End Testing" }
+        - { name: "API Testing" }
+        - { name: "JSON Contract Testing" }
+        - { name: "Regression Testing" }
+        - { name: "Manual Testing" }
+        - { name: "Test Case Design & Execution" }
+
+projects:
+  - id: "project-1"
+    title: "E2E Automation Framework"
+    description: |
+      A comprehensive end-to-end test suite built with Playwright and TypeScript,
+      demonstrating Page Object Model patterns, parallel execution, and CI/CD integration.
+      Covers authentication, shopping cart, and checkout flows across multiple browsers.
+    tags: ["Playwright", "TypeScript", "POM", "CI/CD", "GitHub Actions"]
+    github: ""
+    demo: ""
+    status: "placeholder"
+    featured: true
+  - id: "project-2"
+    title: "API Test Suite"
+    description: |
+      REST API validation framework using Playwright's request context and custom
+      reporting. Includes schema validation, authentication testing, and data-driven
+      test scenarios.
+    tags: ["Playwright", "API Testing", "TypeScript", "JSON Schema"]
+    github: ""
+    demo: ""
+    status: "placeholder"
+    featured: true
+  - id: "project-3"
+    title: "Performance Test Suite"
+    description: |
+      Load and performance testing framework demonstrating baseline measurements,
+      regression detection, and integration with CI pipelines for automated
+      performance budgets.
+    tags: ["Performance", "k6", "Grafana", "CI/CD"]
+    github: ""
+    demo: ""
+    status: "placeholder"
+    featured: false
+
+test_runner:
+  enabled: true
+  title: "Live Test Runner"
+  description: "Trigger real Playwright tests and watch them execute live — no recording, no editing, just real automation."
+  default_suite: "demo-saucedemo"
+  available_suites:
+    - id: "demo-saucedemo"
+      label: "SauceDemo E2E Suite"
+      spec_pattern: "tests/demo-saucedemo.spec.ts"
+    - id: "portfolio"
+      label: "Portfolio Tests"
+      spec_pattern: "tests/portfolio.spec.ts"
