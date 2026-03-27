@@ -43,7 +43,7 @@ COPY --from=frontend-build /app/frontend/dist ./public
 
 # Playwright tests
 COPY playwright-tests/package*.json ./playwright-tests/
-RUN cd playwright-tests && npm ci --omit=dev
+RUN cd playwright-tests && npm ci
 COPY playwright-tests/ ./playwright-tests/
 
 RUN mkdir -p /app/reports

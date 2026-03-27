@@ -10,8 +10,10 @@
     "test:portfolio": "playwright test tests/portfolio.spec.ts",
     "report": "playwright show-report"
   },
+  "dependencies": {
+    "@playwright/test": "^1.45.2"
+  },
   "devDependencies": {
-    "@playwright/test": "^1.45.2",
     "@types/node": "^22.0.0",
     "typescript": "^5.5.3"
   }
