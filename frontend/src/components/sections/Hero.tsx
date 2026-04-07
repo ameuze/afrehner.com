@@ -5,7 +5,6 @@ import { Button } from '../ui/Button'
 
 const TYPED_STRINGS = [
   'playwright test',
-  'cypress run',
   'npm test',
 ]
 
@@ -104,6 +103,12 @@ export function Hero({ config }: { config: SiteConfig }) {
                 </Button>
               </a>
             )}
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download>
+              <Button variant="primary" size="lg">
+                <FileText size={16} />
+                Download Resume
+              </Button>
+            </a>
             <a href="#test-runner">
               <Button variant="secondary" size="lg">
                 <span className="text-[var(--accent-green)]">▶</span>

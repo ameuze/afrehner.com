@@ -9,11 +9,9 @@ personal:
 social:
   github: "https://github.com/ameuze"
   linkedin: "https://linkedin.com/in/annette.frehner"
-  twitter: ""
-  youtube: ""
 
 resume:
-  url: "PLACEHOLDER_RESUME_URL"
+  url: "afrehner.com"
   label: "Download Resume"
 
 about:
@@ -23,13 +21,13 @@ about:
     applications. Proven ability to troubleshoot complex issues and deliver
     high-quality, defect-free software through meticulous testing and collaboration.
 
-    I'm passionate about building robust automation frameworks and driving software
-    quality end-to-end — from writing API contract tests with Pact to crafting
-    maintainable UI automation with Playwright and JavaScript.
+    I’m passionate about building reliable automation frameworks and improving software 
+    quality end-to-end — from validating APIs and ensuring consistent responses to 
+    creating maintainable UI automation using Playwright and JavaScript.
   highlights:
     - "8+ years in QA automation and manual testing"
     - "Expert in Playwright end-to-end automation"
-    - "API contract (Pact) testing and JSON schema validation"
+    - "API contract (Postman) testing and JSON schema validation"
     - "Agile methodologies and cross-team collaboration"
     - "Automation framework architecture and module versioning"
 
@@ -72,7 +70,6 @@ projects:
     tags: ["Playwright", "TypeScript", "POM", "CI/CD", "GitHub Actions"]
     github: ""
     demo: ""
-    status: "placeholder"
     featured: true
   - id: "project-2"
     title: "API Test Suite"
@@ -83,7 +80,6 @@ projects:
     tags: ["Playwright", "API Testing", "TypeScript", "JSON Schema"]
     github: ""
     demo: ""
-    status: "placeholder"
     featured: true
   - id: "project-3"
     title: "Performance Test Suite"
@@ -94,7 +90,6 @@ projects:
     tags: ["Performance", "k6", "Grafana", "CI/CD"]
     github: ""
     demo: ""
-    status: "placeholder"
     featured: false
 
 test_runner:

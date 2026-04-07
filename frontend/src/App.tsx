@@ -14,17 +14,20 @@ export default function App() {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
-        <Navbar name={config.personal.name} />
-        <main>
-          <Hero config={config} />
-          <About config={config} />
-          <Skills config={config} />
-          <Projects config={config} />
-          <Resume config={config} />
-          {config.test_runner.enabled && <TestRunnerPanel config={config} />}
-          <Contact config={config} />
-        </main>
-        <Footer config={config} />
+        <div className="animated-grid" aria-hidden="true" />
+        <div className="relative z-[1]">
+          <Navbar name={config.personal.name} />
+          <main>
+            <Hero config={config} />
+            <About config={config} />
+            <Skills config={config} />
+            <Projects config={config} />
+            <Resume config={config} />
+            {config.test_runner.enabled && <TestRunnerPanel config={config} />}
+            <Contact config={config} />
+          </main>
+          <Footer config={config} />
+        </div>
       </div>
     </ThemeProvider>
   )
