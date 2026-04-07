@@ -6,6 +6,7 @@ import { Button } from '../ui/Button'
 const TYPED_STRINGS = [
   'playwright test',
   'npm test',
+  'playwright test --headed'
 ]
 
 function useTypingEffect(strings: string[], speed = 80, pause = 1800) {
