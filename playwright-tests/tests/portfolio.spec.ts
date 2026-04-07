@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 
-const BASE_URL = process.env.PORTFOLIO_URL ?? 'http://localhost:80'
+const BASE_URL = process.env.PORTFOLIO_URL ?? 'http://localhost:5173'
 
 test.describe('Portfolio Website Tests', () => {
   test('TC-P01 | Homepage loads and displays hero section', async ({ page }) => {
