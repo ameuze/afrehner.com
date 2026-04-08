@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+  push:
+    branches: [deploy]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            cd ~/afrehner.com
+            git fetch origin deploy
+            git checkout deploy
+            git pull origin deploy
+            docker build . -t afrehner.com
+            cd ~/snowbuilt-services
+            docker compose up -d --force-recreate afrehner.com
