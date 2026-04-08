@@ -4,6 +4,8 @@ services:
   app:
     build: .
     restart: unless-stopped
+    environment:
+      - PORTFOLIO_URL=https://afrehner.com
     ports:
       - "3001:3001"
     volumes:

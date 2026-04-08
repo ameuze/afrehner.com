@@ -54,6 +54,7 @@ class TestRunnerService extends EventEmitter {
       cwd: testsDir,
       env: {
         ...process.env,
+        PORTFOLIO_URL: env.PORTFOLIO_URL,
         PLAYWRIGHT_JSON_OUTPUT_NAME: path.join(reportDir, 'results.json'),
         FORCE_COLOR: '1',
       },

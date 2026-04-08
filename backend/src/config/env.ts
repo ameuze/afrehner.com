@@ -7,6 +7,7 @@ const envSchema = z.object({
   PLAYWRIGHT_TESTS_DIR: z.string().default('../playwright-tests'),
   REPORTS_DIR: z.string().default('./reports'),
   CORS_ORIGIN: z.string().default('http://localhost:5173'),
+  PORTFOLIO_URL: z.string().default('http://localhost:5173'),
 })
 
 const parsed = envSchema.safeParse(process.env)

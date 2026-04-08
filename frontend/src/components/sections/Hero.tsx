@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Github, Linkedin, Twitter, FileText, ChevronDown } from 'lucide-react'
+import { Github, Linkedin, Twitter, ChevronDown } from 'lucide-react'
 import type { SiteConfig } from '../../types/config'
 import { Button } from '../ui/Button'
 
@@ -49,7 +49,7 @@ function useTypingEffect(strings: string[], speed = 80, pause = 1800) {
 }
 
 export function Hero({ config }: { config: SiteConfig }) {
-  const { personal, social, resume } = config
+  const { personal, social } = config
   const typedCmd = useTypingEffect(TYPED_STRINGS)
 
   return (
@@ -96,21 +96,7 @@ export function Hero({ config }: { config: SiteConfig }) {
 
           {/* CTA buttons */}
           <div className="flex flex-wrap gap-3 mb-12">
-            {resume.url && resume.url !== 'PLACEHOLDER_RESUME_URL' && (
-              <a href={resume.url} target="_blank" rel="noopener noreferrer">
-                <Button variant="primary" size="lg">
-                  <FileText size={16} />
-                  {resume.label}
-                </Button>
-              </a>
-            )}
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download>
-              <Button variant="primary" size="lg">
-                <FileText size={16} />
-                Download Resume
-              </Button>
-            </a>
-            <a href="#test-runner">
+<a href="#test-runner">
               <Button variant="secondary" size="lg">
                 <span className="text-[var(--accent-green)]">▶</span>
                 Watch Tests Run Live

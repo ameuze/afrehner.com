@@ -30,7 +30,7 @@ export function Resume({ config }: { config: SiteConfig }) {
               <a href={RESUME_PDF} download>
                 <Button variant="secondary" size="lg">
                   <Download size={16} />
-                  Download PDF
+                  Download Resume
                 </Button>
               </a>
             </div>
