@@ -70,6 +70,7 @@ projects:
     tags: ["Playwright", "TypeScript", "POM", "CI/CD", "GitHub Actions"]
     github: ""
     demo: ""
+    status: "completed"
     featured: true
   - id: "project-2"
     title: "API Test Suite"
@@ -80,6 +81,7 @@ projects:
     tags: ["Playwright", "API Testing", "TypeScript", "JSON Schema"]
     github: ""
     demo: ""
+    status: "completed"
     featured: true
   - id: "project-3"
     title: "Performance Test Suite"
@@ -90,6 +92,7 @@ projects:
     tags: ["Performance", "k6", "Grafana", "CI/CD"]
     github: ""
     demo: ""
+    status: "placeholder"
     featured: false
 
 test_runner:
