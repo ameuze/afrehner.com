@@ -96,7 +96,7 @@ export function Hero({ config }: { config: SiteConfig }) {
 
           {/* CTA buttons */}
           <div className="flex flex-wrap gap-3 mb-12">
-<a href="#test-runner">
+            <a href="#test-runner">
               <Button variant="secondary" size="lg">
                 <span className="text-[var(--accent-green)]">▶</span>
                 Watch Tests Run Live
@@ -105,6 +105,15 @@ export function Hero({ config }: { config: SiteConfig }) {
             <a href="#contact">
               <Button variant="ghost" size="lg">
                 Get in Touch
+              </Button>
+            </a>
+            <a href="#test-runner">
+              <Button variant="ghost" size="lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+                  <path d="m12 14 4-4" stroke="#ef4444" />
+                </svg>
+                Run Performance Tests
               </Button>
             </a>
           </div>

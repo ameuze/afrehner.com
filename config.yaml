@@ -107,3 +107,6 @@ test_runner:
     - id: "portfolio"
       label: "Portfolio Tests"
       spec_pattern: "tests/portfolio.spec.ts"
+    - id: "performance"
+      label: "Performance Suite"
+      spec_pattern: "tests/performance.spec.ts"
