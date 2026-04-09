@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Play, Square, RotateCcw, ChevronDown } from 'lucide-react'
 import type { SiteConfig } from '../../types/config'
 import { useTestRunner } from '../../hooks/useTestRunner'
@@ -22,6 +22,24 @@ export function TestRunnerPanel({ config }: { config: SiteConfig }) {
   const { test_runner } = config
   const [selectedSuite, setSelectedSuite] = useState(test_runner.default_suite)
   const { state, triggerRun, cancelRun, reset } = useTestRunner()
+
+  useEffect(() => {
+    const handleSuiteParam = () => {
+      const params = new URLSearchParams(window.location.search)
+      const suite = params.get('suite')
+      if (suite && test_runner.available_suites.some(s => s.id === suite)) {
+        setSelectedSuite(suite)
+        triggerRun(suite)
+        params.delete('suite')
+        const newUrl = [window.location.pathname, params.toString()].filter(Boolean).join('?') + window.location.hash
+        window.history.replaceState(null, '', newUrl)
+      }
+    }
+
+    handleSuiteParam()
+    window.addEventListener('popstate', handleSuiteParam)
+    return () => window.removeEventListener('popstate', handleSuiteParam)
+  }, [])
 
   const isActive = state.status === 'connecting' || state.status === 'running'
   const isDone = ['passed', 'failed', 'cancelled', 'error', 'busy'].includes(state.status)

@@ -16,6 +16,7 @@ function getAvailableSuites(): Array<{ id: string; label: string; spec_pattern: 
   return [
     { id: 'demo-saucedemo', label: 'SauceDemo E2E Suite', spec_pattern: 'tests/demo-saucedemo.spec.ts' },
     { id: 'portfolio', label: 'Portfolio Tests', spec_pattern: 'tests/portfolio.spec.ts' },
+    { id: 'performance', label: 'Performance Suite', spec_pattern: 'tests/performance.spec.ts' },
   ]
 }
 
