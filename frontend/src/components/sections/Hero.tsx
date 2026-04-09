@@ -96,26 +96,40 @@ export function Hero({ config }: { config: SiteConfig }) {
 
           {/* CTA buttons */}
           <div className="flex flex-wrap gap-3 mb-12">
-            <a href="#test-runner">
-              <Button variant="secondary" size="lg">
-                <span className="text-[var(--accent-green)]">▶</span>
-                Watch Tests Run Live
-              </Button>
-            </a>
+            <button
+              onClick={() => {
+                const url = new URL(window.location.href)
+                url.searchParams.set('suite', 'demo-saucedemo')
+                window.history.pushState(null, '', url.toString())
+                window.dispatchEvent(new PopStateEvent('popstate'))
+                document.getElementById('test-runner')?.scrollIntoView({ behavior: 'smooth' })
+              }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--bg-surface)] border border-[var(--border-subtle)] text-[var(--text-primary)] hover:border-[var(--accent-green)] transition-colors font-medium text-base"
+            >
+              <span className="text-[var(--accent-green)]">▶</span>
+              Watch Tests Run Live
+            </button>
             <a href="#contact">
               <Button variant="ghost" size="lg">
                 Get in Touch
               </Button>
             </a>
-            <a href="#test-runner">
-              <Button variant="ghost" size="lg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
-                  <path d="m12 14 4-4" stroke="#ef4444" />
-                </svg>
-                Run Performance Tests
-              </Button>
-            </a>
+            <button
+              onClick={() => {
+                const url = new URL(window.location.href)
+                url.searchParams.set('suite', 'performance')
+                window.history.pushState(null, '', url.toString())
+                window.dispatchEvent(new PopStateEvent('popstate'))
+                document.getElementById('test-runner')?.scrollIntoView({ behavior: 'smooth' })
+              }}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[var(--border-subtle)] text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:border-[var(--text-muted)] transition-colors font-medium text-base"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+                <path d="m12 14 4-4" stroke="#ef4444" />
+              </svg>
+              Run Performance Tests
+            </button>
           </div>
 
           {/* Social links */}
