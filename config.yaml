@@ -92,7 +92,7 @@ projects:
     tags: ["Performance", "k6", "Grafana", "CI/CD"]
     github: ""
     demo: ""
-    status: "placeholder"
+    status: "completed"
     featured: false
 
 test_runner:
