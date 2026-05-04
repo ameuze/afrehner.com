@@ -22,7 +22,7 @@ app.use(requestLogger)
 
 // Rate limit test trigger endpoint only
 const triggerLimiter = rateLimit({
-  windowMs: 10 * 60 * 1000, // 10 minutes
+  windowMs: 1 * 60 * 1000, // 1 minute
   max: 5,
   message: { error: 'Too many test runs triggered. Please wait before running again.' },
   standardHeaders: true,
